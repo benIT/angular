@@ -1,25 +1,27 @@
 var tyres = $('tyre') ; 
+var initEvents = ['click'] ;
 for (var i = 0; i < tyres.length; i++) {
 	console.log(tyres[i].innerText) ;
 };
 
-on('event[action="add"]','click', function () {
+on('event[action="add"]',initEvents, function () {
 	console.log(new Date()) ;
 });
 
-off('event[action="remove"]','click',function(){
+off('event[action="remove"]',initEvents,function(){
 	console.log('inactive');
 }) ;
 
-edit('event[action="edit"]','click', function () {
+edit('event[action="edit"]',initEvents, function () {
 	document.getElementById('form').style.display = 'block';
 });
 
-save('event[action="save"]','click', function () {
+save('event[action="save"]',initEvents, function () {
 	
-	document.getElementById('form').style.display = 'none';
+	//document.getElementById('form').style.display = 'none';
+	$('#form')[0].style.display = 'none';
 	var iDiv = document.createElement('tyre');
-	document.getElementsByTagName('list')[0].appendChild(iDiv);
+	$('list')[0].appendChild(iDiv);
 
 	var innerDiv = document.createElement('reference');
 	innerDiv.innerText = $('#reference')[0].value;
@@ -43,7 +45,7 @@ save('event[action="save"]','click', function () {
 	var innerDiv7 = document.createElement("event");
 	innerDiv7.setAttribute("action", "remove");
 	innerDiv7.innerText = '-';
-	//innerDiv6.innerText = $('#heigth')[0].value;
+		//innerDiv6.innerText = $('#heigth')[0].value;
 
 	iDiv.appendChild(innerDiv);
 	iDiv.appendChild(innerDiv2);
