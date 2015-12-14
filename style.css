@@ -1,6 +1,6 @@
 list {
 	display: grid;
-	width: 300px;
+	width: 100%;
 }
 
 tyre {
@@ -8,11 +8,35 @@ tyre {
 	display: inline-table;
 	border-color: grey;
 	border-style: solid;
-	border-width: 3px;
-	border-radius: 2px;
-	/* width: 150px; */
+	border-width: 1px;
+	border-radius: 3px;
+	width: 100%;
+	margin-top: 10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	width: 50%;
 }
 /*get first children*/
 tyre > * {
 	margin-left: 15px;
+}
+
+
+event[action='add'], event[action='remove'] {
+	cursor: pointer;
+	width: 20px;
+	display: inline-block;
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	float: right;
+	margin-right: 5px;
+}
+
+event[action='add'] {
+	background-color: green;
+}
+
+event[action='remove'] {
+	background-color: red;
 }
