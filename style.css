@@ -22,21 +22,33 @@ tyre > * {
 }
 
 
-event[action='add'], event[action='remove'] {
+event[action='edit'], event[action='remove'], event[action='save'] {
 	cursor: pointer;
-	width: 20px;
+	width: 50px;
 	display: inline-block;
 	color: white;
-	border-radius: 10px;
+	border-radius: 5px;
 	text-align: center;
 	float: right;
 	margin-right: 5px;
 }
 
-event[action='add'] {
+event[action='edit'] {
 	background-color: green;
 }
 
 event[action='remove'] {
 	background-color: red;
+}
+
+event[action='save'] {
+	background-color: gold;
+}
+
+.form {
+	display: none ;
+}
+
+.visible {
+	display: block;  ;
 }
