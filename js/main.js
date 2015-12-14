@@ -3,27 +3,56 @@ for (var i = 0; i < tyres.length; i++) {
 	console.log(tyres[i].innerText) ;
 };
 
-on('event[action="edit"]','click', function () {
+on('event[action="add"]','click', function () {
 	console.log(new Date()) ;
 });
 
-off('event[action="edit"]','click',function(){
+off('event[action="remove"]','click',function(){
 	console.log('inactive');
 }) ;
 
-on('event[action="add"]','click', function () {
-	$('.form')[0].className += " visible" ;
+edit('event[action="edit"]','click', function () {
+	document.getElementById('form').style.display = 'block';
 });
 
-on('event[action="save"]','click', function () {
-	$('.form')[0].className = "form" ;
-	var tyre = document.createElement('tyre');
-	tyre.innerText += '<reference>'+$('.form input[name="reference"]')[0].value+'</reference>' ;
-	tyre.innerText += '<vehiculeType>'+$('.form input[name="vehiculeType"]')[0].value+'</vehiculeType>' ;
-	tyre.innerText += '<heigth>'+$('.form input[name="heigth"]')[0].value+'</heigth>' ;
-	tyre.innerText += '<width>'+$('.form input[name="width"]')[0].value+'</width>' ;
-	tyre.innerText += '<thickness>'+$('.form input[name="thickness"]')[0].value+'</thickness>' ;
-	tyre.innerText += '<other>'+$('.form input[name="other"]')[0].value+'</other>' ;
-	tyre += '</tyre>' ;
-	$('list')[0].appendChild(tyre) ;
+save('event[action="save"]','click', function () {
+	
+	document.getElementById('form').style.display = 'none';
+	var iDiv = document.createElement('tyre');
+	document.getElementsByTagName('list')[0].appendChild(iDiv);
+
+	var innerDiv = document.createElement('reference');
+	innerDiv.innerText = $('#reference')[0].value;
+
+	var innerDiv2 = document.createElement('vehiculeType');
+	innerDiv2.innerText = $('#vehiculeType')[0].value;
+
+	var innerDiv3 = document.createElement('heigth');
+	innerDiv3.innerText = $('#heigth')[0].value;
+
+	var innerDiv4 = document.createElement('width');
+	innerDiv4.innerText = $('#width')[0].value;
+
+	var innerDiv5 = document.createElement('thickness');
+	innerDiv5.innerText = $('#heigth')[0].value;
+
+	var innerDiv6 = document.createElement("event");
+	innerDiv6.setAttribute("action", "add");
+	innerDiv6.innerText = '+';
+
+	var innerDiv7 = document.createElement("event");
+	innerDiv7.setAttribute("action", "remove");
+	innerDiv7.innerText = '-';
+	//innerDiv6.innerText = $('#heigth')[0].value;
+
+	iDiv.appendChild(innerDiv);
+	iDiv.appendChild(innerDiv2);
+	iDiv.appendChild(innerDiv3);
+	iDiv.appendChild(innerDiv4);
+	iDiv.appendChild(innerDiv5);
+	iDiv.appendChild(innerDiv6);
+	iDiv.appendChild(innerDiv7);
+
+
+
 });

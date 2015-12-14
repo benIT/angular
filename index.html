@@ -6,45 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Un fabriquant de pneu ou autre (63)</h1>
+	<h1>Michelin</h1>
 	<p>https://github.com/benIT/angular.git</p>
-	<list>
+<list>
 		<tyre>
-			<reference>reference1</reference>
-			<vehiculeType>vehiculeType1</vehiculeType>
+			<reference>reference5</reference>
+			<vehiculeType>vehiculeType5</vehiculeType>
 			<pattern>
-				<heigth>heigth1</heigth>
-				<width>width1</width>
-				<thickness>thickness1</thickness>
+				<heigth>heigth5</heigth>
+				<width>width5</width>
+				<thickness>thickness5</thickness>
 			</pattern>
-			<other>other</other>
-			<event action="edit">edit</event>
+			<other>other5</other>
+			<event action="add">+</event>
 			<event action="remove">-</event>
+			<event action="edit">EDIT</event>
+		</tyre>
+
+		<tyre class="form" id ="form">
+			<label for="referenceLabel">reference :</label>
+			<input id="reference" type="text" name="reference" placeholder="reference">
+			<label for="vehiculeTypeLabel">Vehicule type :</label>
+			<input id="vehiculeType" type="text" name="vehiculeType" placeholder="vehicule">
+			<label for="heigthLabel">heigth :</label>
+			<input id="heigth" type="text" name="heigth" placeholder="heigth">
+			<label for="widthLabel">width :</label>
+			<input id="width" type="text" name="width" placeholder="width">
+			<event action="save">SAVE</event>
 		</tyre>
 	</list>
-
-
-	<tyre class="form">
-		<input type="text" name="reference" placeholder="reference">
-		<input type="text" name="vehiculeType" placeholder="vehiculeType">
-		<input type="text" name="heigth" placeholder="heigth">
-		<input type="text" name="width" placeholder="width">
-		<input type="text" name="thickness" placeholder="thickness">
-		<input type="text" name="other" placeholder="other">
-
-		<!--<vehiculeType>vehiculeType1</vehiculeType>
-		<pattern>
-			<heigth>heigth1</heigth>
-			<width>width1</width>
-			<thickness>thickness1</thickness>
-		</pattern>
-		<other>other</other>
-	-->
-		<event action="save">save</event>
-	</tyre>
-
-	<event action="add">Add a new tyre</event>
-
 	<script type="text/javascript" src="js/lib.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

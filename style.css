@@ -22,33 +22,44 @@ tyre > * {
 }
 
 
-event[action='edit'], event[action='remove'], event[action='save'] {
+event[action='add'], event[action='remove']{
 	cursor: pointer;
-	width: 50px;
+	width: 20px;
 	display: inline-block;
 	color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	text-align: center;
 	float: right;
 	margin-right: 5px;
 }
 
-event[action='edit'] {
+event[action='edit'], event[action='save'] {
+	cursor: pointer;
+	width: 100px;
+	display: inline-block;
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	float: right;
+	margin-right: 5px;
+}
+
+event[action='add'] {
 	background-color: green;
+}
+
+event[action='edit'] {
+	background-color: blue;
+}
+
+event[action='save'] {
+	background-color: blue;
 }
 
 event[action='remove'] {
 	background-color: red;
 }
 
-event[action='save'] {
-	background-color: gold;
-}
-
 .form {
-	display: none ;
-}
-
-.visible {
-	display: block;  ;
+	display: none;
 }
