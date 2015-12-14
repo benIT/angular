@@ -1,12 +1,9 @@
-var tyres = $('tyre') ; 
-for (var i = 0; i < tyres.length; i++) {
-	console.log(tyres[i].innerText) ;
-};
-
+var tyres = [] ; 
+var elements = ['reference', 'vehiculeType', 'pattern_height','pattern_width','pattern_thickness','other'];
 var initEve = ['click'];
 
 on('event[action="add"]',initEve , function () {
-	console.log(new Date()) ;
+	document.getElementById('form').style.display = 'block';
 });
 
 off('event[action="remove"]',initEve,function(){
@@ -14,17 +11,16 @@ off('event[action="remove"]',initEve,function(){
 }) ;
 
 edit('event[action="edit"]',initEve, function () {
-	document.getElementById('form').style.display = 'block';
+	console.log('inactive');
 });
 
 save('event[action="save"]',initEve, function () {
 	
 	$('#form')[0].style.display = 'none';
-	// to do: convert form to Type object
-	// and then append into iDiv
 		
-var elements = ['reference', 'vehiculeType', 'pattern_heigth','pattern_width','pattern_thickness'];
-var pneu = Tyre.prototype.tyreForm('.form',elements);
-pneu.addTyre('.form', pneu);
+	var newTyre = Tyre.prototype.tyreForm('.form',elements);
+	newTyre.addTyre('list');
+	
+	tyres.push(newTyre);
 });
 

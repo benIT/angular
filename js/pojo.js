@@ -1,82 +1,57 @@
-function Pattern(heigth, width,thickness) {
-  	this.heigth = heigth;
+function Pattern(height, width, thickness) {
+  	this.height = height;
   	this.width = width;
   	this.thickness = thickness;
   }
 
-function Tyre (reference, vehiculeType, pattern,other ) { 
+function Tyre (reference, vehiculeType, height, width, thickness, other) { 
   this.reference = reference;
   this.vehiculeType = vehiculeType;
-  this.pattern = pattern;
+  this.pattern = new Pattern();
   this.other = other;  
 }
 
 Tyre.prototype = Tyre.prototype || {};
-Tyre.prototype = 
-{
- tyreForm : function (rootForm, elements) {
-					// des trucs et des lignes a ecrire
 
-					var pneu = new Tyre();
-					
-					pneu.pattern = new Pattern ();
+Tyre.prototype.tyreForm = function (rootForm, elements) {
 
-					elements.forEach(function (element, index){
+	var pneu = new Tyre();
 
-					var table = element.split('_');
+	elements.forEach(function (element, index){
 
-					var selector = null;
-					console.log(element);
-					if(table.length == 1) {
+		var table = element.split('_');
 
-						pneu[table[0]] =$(rootForm + ' #' + element)[0].value;
-					} else {
+		var selector = null;
+		console.log(element);
+		if(table.length == 1) {
 
-						pneu[table[0]][table[1]] =$(rootForm + ' #' + element)[0].value;
-					}
-					});
-					
-					return pneu;
-			},
+			pneu[table[0]] =$(rootForm + ' #' + element)[0].value;
+		} else {
 
-//Tyre.prototype = Tyre.prototype || {};
-addTyre : function (rootElement, pneu) {
+			pneu[table[0]][table[1]] =$(rootForm + ' #' + element)[0].value;
+		}
+		$(rootForm + ' #' + element)[0].value = "";
+	});
+	
+	
+	return pneu;
+};
 
-					var iDiv = document.createElement('tyre');
-					$(rootElement)[0].appendChild(iDiv);
+Tyre.prototype.addTyre = function (rootElement) {
+	
+		var html = "<tyre>";
+		html += "<reference>"+this.reference+"</reference>";
+		html += "<vehiculeType>"+this.vehiculeType+"</vehiculeType>";
+		html += "<pattern>";
+		html += "<height>"+this.pattern.height+"</height>";
+		html += "<width>"+this.pattern.width+"</width>";
+		html += "<thickness>"+this.pattern.thickness+"</thickness>";
+		html += "</pattern>";
+		html += "<other>"+this.other+"</other>";
+		html += "<event action='edit'>edit</event>";
+		html += "<event action='remove'>-</event>";
+		html += "</tyre>";
+		
+		$(rootElement)[0].innerHTML += html;
 
-						var innerDiv = document.createElement('reference');
-					innerDiv.innerText = pneu.reference;
-
-					var innerDiv2 = document.createElement('vehiculeType');
-					innerDiv2.innerText = pneu.vehiculeType;
-
-					var innerDiv3 = document.createElement('heigth');
-					innerDiv3.innerText = pneu.pattern.heigth;
-
-					var innerDiv4 = document.createElement('width');
-					innerDiv4.innerText = pneu.pattern.width;
-
-					var innerDiv5 = document.createElement('thickness');
-					innerDiv5.innerText = pneu.pattern.thickness;
-
-					var innerDiv6 = document.createElement("event");
-					innerDiv6.setAttribute("action", "add");
-					innerDiv6.innerText = '+';
-
-					var innerDiv7 = document.createElement("event");
-					innerDiv7.setAttribute("action", "remove");
-					innerDiv7.innerText = '-';
-					//innerDiv6.innerText = $('#heigth')[0].value;
-
-					iDiv.appendChild(innerDiv);
-					iDiv.appendChild(innerDiv2);
-					iDiv.appendChild(innerDiv3);
-					iDiv.appendChild(innerDiv4);
-					iDiv.appendChild(innerDiv5);
-					iDiv.appendChild(innerDiv6);
-					iDiv.appendChild(innerDiv7);
-
-
-			}
-}
+	};

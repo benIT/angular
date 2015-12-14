@@ -2,43 +2,42 @@
 
 <html>
 <head>
-	<title>Un fabriquant de pneu ou autre (63)</title>
+	<title>Ma base de pneus</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Michelin : visal</h1>
+	<h1>Tyre:</h1>
 	<p>https://github.com/benIT/angular.git</p>
-<list>
+	
+	<event action="add">+</event>
+	
+	<list>
 		<tyre>
 			<reference>reference5</reference>
 			<vehiculeType>vehiculeType5</vehiculeType>
 			<pattern>
-				<heigth>heigth5</heigth>
+				<height>height5</height>
 				<width>width5</width>
 				<thickness>thickness5</thickness>
 			</pattern>
 			<other>other5</other>
-			<event action="add">+</event>
+			<event action="edit">edit</event>
 			<event action="remove">-</event>
-			<event action="edit">EDIT</event>
-		</tyre>
-
-		<tyre class="form" id ="form">
-			<label for="referenceLabel">reference :</label>
-			<input id="reference" type="text" name="reference" placeholder="reference">
-			<label for="vehiculeTypeLabel">Vehicule type :</label>
-			<input id="vehiculeType" type="text" name="vehiculeType" placeholder="vehicule">
-			<label for="heigthLabel">heigth :</label>
-			<input id="heigth" type="text" name="pattern_heigth" placeholder="heigth">
-			<label for="widthLabel">width :</label>
-			<input id="width" type="text" name="pattern_width" placeholder="width">
-			<label for="widthLabel">thickness :</label>
-			<input id="width" type="text" name="pattern_thickness" placeholder="width">
-			<event action="save">SAVE</event>
 		</tyre>
 	</list>
-	<script type="text/javascript" src="js/lib.js"></script>
+
+	<tyre class="form" id ="form">
+		<input id="reference" type="text" name="reference" placeholder="reference">
+		<input id="vehiculeType" type="text" name="vehiculeType" placeholder="vehicule">
+		<input id="pattern_height" type="text" name="pattern_height" placeholder="height">
+		<input id="pattern_width" type="text" name="pattern_width" placeholder="width">
+		<input id="pattern_thickness" type="text" name="pattern_thickness" placeholder="thickness">
+		<input id="other" type="text" name="other" placeholder="other">
+		<event action="save">SAVE</event>
+	</tyre>
+	
 	<script type="text/javascript" src="js/pojo.js"></script>
+	<script type="text/javascript" src="js/lib.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
