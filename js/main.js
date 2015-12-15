@@ -1,7 +1,14 @@
-var elements = ['reference', 'vehiculeType', 'pattern_height','pattern_width','pattern_thickness','other'];
-var initEve = ['click'];
+// Imports modules dependencies
+var imports = ['ngRoute', 'ngResource'];
+var modis = angular.module('modis', imports);
 
-(function(){
-	modis.inject('controller','add')();
-	modis.inject('controller','save')();	
-})();
+// app configuration
+modis.config(['$routeProvider', function ($routeProvider) {
+
+	$routeProvider.when('/', {
+        templateUrl: 'partials/tyres.tpl',
+        controller: 'TyresController'
+  	});
+
+}]);
+

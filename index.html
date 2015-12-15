@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-	<title>Ma base de pneus</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<h1>Tyre:</h1>
-	<p>https://github.com/benIT/angular.git</p>
-	
-	<event action="add">+</event>
-	
-	<list>
-		<tyre>
-			<reference>reference5</reference>
-			<vehiculeType>vehiculeType5</vehiculeType>
-			<pattern>
-				<height>height5</height>
-				<width>width5</width>
-				<thickness>thickness5</thickness>
-			</pattern>
-			<other>other5</other>
-			<event action="edit">edit</event>
-			<event action="remove">-</event>
-		</tyre>
-	</list>
+<html ng-app="modis">
+	<head>
+		<base href="/">
+		<title>Ma base de pneus</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div ng-view></div>
 
-	<tyre class="form" id ="form">
-		<input id="reference" type="text" name="reference" placeholder="reference">
-		<input id="vehiculeType" type="text" name="vehiculeType" placeholder="vehicule">
-		<input id="pattern_height" type="text" name="pattern_height" placeholder="height">
-		<input id="pattern_width" type="text" name="pattern_width" placeholder="width">
-		<input id="pattern_thickness" type="text" name="pattern_thickness" placeholder="thickness">
-		<input id="other" type="text" name="other" placeholder="other">
-		<event action="save">SAVE</event>
-	</tyre>
-	
-	<script type="text/javascript" src="js/modis.js"></script>
-	<script type="text/javascript" src="js/controller.js"></script>
-	<script type="text/javascript" src="js/resource.js"></script>
-	<script type="text/javascript" src="js/service.js"></script>
-	<script type="text/javascript" src="js/view.js"></script>
-	<script type="text/javascript" src="js/pojo.js"></script>
-	<script type="text/javascript" src="js/lib.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-</body>
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+		
+		<!--<<script type="text/javascript" src="js/modis.js"></script>
+		<script type="text/javascript" src="js/resource.js"></script>
+		<script type="text/javascript" src="js/view.js"></script>
+		<script type="text/javascript" src="js/pojo.js"></script>-->
+		<script type="text/javascript" src="js/lib.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+
+	</body>
 </html>

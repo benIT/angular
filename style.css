@@ -38,7 +38,6 @@ event{
 }
 
 event[action='edit'], event[action='save'] {
-	width: 100px;
 	background-color: blue;
 }
 
@@ -48,6 +47,10 @@ event[action='add'] {
 }
 
 event[action='save'] {
+	width: 100px;
+	margin-top: 10px;
+	float: none;
+	clear: both;
 	background-color: blue;
 }
 
@@ -57,4 +60,8 @@ event[action='remove'] {
 
 .form {
 	display: none;
+}
+
+.visible {
+	display: block;
 }
