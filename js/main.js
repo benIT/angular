@@ -15,6 +15,16 @@ modis.config(['$routeProvider', function ($routeProvider) {
         controller: 'ManageTyresController'
   	});
 
+  	// Dispatcher (need to be test)
+	/*$routeProvider.when('/dispatch/:action', {
+        templateUrl: function($routeParams) {
+        	return 'partials/'+$routeParams['action']+'.tpl',
+        },
+        controllerProvider: function($routeParams) {
+        	return $routeParams['action']+"Controller",
+        },
+  	});*/
+
   	$routeProvider.otherwise('/');
 }]);
 
