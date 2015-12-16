@@ -1,33 +1,31 @@
 [
     {
-    	"r1":{
-    	   "reference":"r1", 
-    	   "vehiculeType":"v1", 
-    	   "pattern":{ 
-        	   "height":"h1", 
-        	   "thickness":"t1", 
-        	   "width":"w1"
-    	   }
-    	},
-    	"r2":{
-    	   "reference":"r2", 
-    	   "vehiculeType":"v2", 
-    	   "pattern":{ 
-        	   "height":"h2", 
-        	   "thickness":"t2", 
-        	   "width":"w2"
-    	   }
-    	},
-    	"r3":{
-    	   "reference":"r3", 
-    	   "vehiculeType":"v3", 
-    	   "pattern":{ 
-        	   "height":"h3", 
-        	   "thickness":"t3", 
-        	   "width":"w3"
-    	   }
-    	}
+        "r1":{
+           "reference":"r1", 
+           "vehiculeType":"v1", 
+           "pattern":{ 
+               "height":"h1", 
+               "thickness":"t1", 
+               "width":"w1"
+           }
+        },
+        "r2":{
+           "reference":"r2", 
+           "vehiculeType":"v2", 
+           "pattern":{ 
+               "height":"h2", 
+               "thickness":"t2", 
+               "width":"w2"
+           }
+        },
+        "r3":{
+           "reference":"r3", 
+           "vehiculeType":"v3", 
+           "pattern":{ 
+               "height":"h3", 
+               "thickness":"t3", 
+               "width":"w3"
+           }
+        }
     }
 ]
-
-
