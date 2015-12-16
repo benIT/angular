@@ -7,8 +7,14 @@ modis.config(['$routeProvider', function ($routeProvider) {
 
 	$routeProvider.when('/', {
         templateUrl: 'partials/tyres.tpl',
-        controller: 'TyresController'
+        controller: 'ListTyresController'
   	});
 
+  	$routeProvider.when('/:action/:key', {
+        templateUrl: 'partials/tyres.tpl',
+        controller: 'ManageTyresController'
+  	});
+
+  	$routeProvider.otherwise('/');
 }]);
 

@@ -1,7 +1,7 @@
 <h1>Tyre:</h1>
 <p>https://github.com/benIT/angular.git</p>
 		
-<event action="add" ng-click="showAddTyre(key)">+</event>
+<a action="add" ng-click="showAddTyre(key)">+</a>
 
 <list>
 	<tyre ng-repeat="(key, tyre) in tyres">
@@ -12,8 +12,8 @@
 			<width>{{tyre.pattern.width}}</width>
 			<thickness>{{tyre.pattern.thickness}}</thickness>
 		</pattern>
-		<event action="edit" ng-click="showEditTyre(key)">e</event>
-		<event action="remove" ng-click="removeTyre(key)">-</event>
+		<a action="edit" ng-href="#/edit/{{key}}">e</a>
+		<a action="remove" ng-href="#/delete/{{key}}">-</a>
 	</tyre>
 </list>
-<div ng-include="'partials/addTyre.tpl'"></div>
+<div ng-include="'partials/addTyre.tpl'" ng-show="displayForm"></div>

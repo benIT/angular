@@ -26,7 +26,7 @@ pattern > * {
 	margin-left: 5px;
 }
 
-event{
+a{
 	cursor: pointer;
 	width: 20px;
 	display: inline-block;
@@ -35,18 +35,19 @@ event{
 	text-align: center;
 	float: right;
 	margin-right: 5px;
+	text-decoration: none;
 }
 
-event[action='edit'], event[action='save'] {
+a[action='edit'], a[action='save'] {
 	background-color: blue;
 }
 
-event[action='add'] {
+a[action='add'] {
 	background-color: green;
 	margin-right: 10%;
 }
 
-event[action='save'] {
+a[action='save'] {
 	width: 100px;
 	margin-top: 10px;
 	float: none;
@@ -54,14 +55,6 @@ event[action='save'] {
 	background-color: blue;
 }
 
-event[action='remove'] {
+a[action='remove'] {
 	background-color: red;
-}
-
-.form {
-	display: none;
-}
-
-.visible {
-	display: block;
 }
