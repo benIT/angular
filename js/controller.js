@@ -9,7 +9,7 @@ modis.controller('ListTyresController', ['$scope','TyresService', function ($sco
 		$scope.tyres = JSON.parse(sessionStorage.getItem("tyres"));
 		if(!$scope.tyres){
 			TyresService.query(function(response){
-				$scope.tyres = response[0];
+				$scope.tyres = response;
 				sessionStorage.setItem('tyres', JSON.stringify($scope.tyres));
 			});
 		}

@@ -1,0 +1,12 @@
+<list>
+	<tyre>
+		<reference></reference>
+		<vehiculeType></vehiculeType>
+		<pattern>
+			<heigth></heigth>
+			<width></width>
+			<thickness></thickness>
+		</pattern>
+		<other></other>
+	</tyre>
+</list>
