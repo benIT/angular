@@ -6,4 +6,5 @@
 	<input ng-model="tyre.pattern.thickness" type="text" placeholder="Epaisseur">
 	<br>
 	<a action="save" ng-click="addTyre()">SAVE</a>
+	<a action="cancel" ui-sref="home">CANCEL</a>
 </tyre>	

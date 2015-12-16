@@ -47,14 +47,13 @@ a[action='add'] {
 	margin-right: 10%;
 }
 
-a[action='save'] {
+a[action='save'], [action='cancel'] {
 	width: 100px;
 	margin-top: 10px;
 	float: none;
 	clear: both;
-	background-color: blue;
 }
 
-a[action='remove'] {
+a[action='remove'], [action='cancel'] {
 	background-color: red;
 }
