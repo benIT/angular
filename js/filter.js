@@ -1,7 +1,7 @@
 angular.module('utils', [])
     .factory('utils', function() {
 
-      var paramPrivee = 'rr';
+      var paramPrivee = '';
       var methodePrivee= function(stra, strb) {
                 stra = (paramPrivee + stra).toLowerCase();
                 strb = (paramPrivee + strb).toLowerCase();
