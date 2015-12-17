@@ -10,6 +10,7 @@ angular.module('utils', [])
       }
     };
   });
+  
 
 angular.module('filters',['utils'])
   .filter('tyreFilter', function(utils){
