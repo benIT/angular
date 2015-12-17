@@ -1,3 +1,4 @@
+'use strict';
 
 // Imports modules dependencies
 var imports = ['ngResource', 'filters', 'ui.router'];

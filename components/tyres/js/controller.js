@@ -1,9 +1,16 @@
 'use strict';
 
-tyres.controller('ListTyresController', ['$scope', '$state', 'TyresService', function ($scope, $state, TyresService) {
+tyres.controller('ListTyresController', ['$translate', '$translatePartialLoader', '$scope', '$state', 'TyresService', function ($translate,$translatePartialLoader, $scope, $state, TyresService) {
 	$scope.tyre = {pattern:{}};
 	$scope.readable = false;
 	$scope.displayForm = false;
+
+	$translatePartialLoader.addPart("components/tyres/i18n");
+	$translate.refresh();
+
+	$scope.changeLang = function() {
+ 		$translate.use($scope.lang);
+	}
 
 	$scope.getTyres = function(){
 		$scope.tyres = JSON.parse(sessionStorage.getItem("tyres"));

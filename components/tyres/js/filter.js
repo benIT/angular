@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('utils', [])
   .factory('utils', function(){
     return{

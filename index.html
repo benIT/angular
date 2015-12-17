@@ -2,17 +2,17 @@
 
 <html ng-app="modis">
 <head>
-	<title>Ma base de pneus</title>
+	<title>{{'title' | translate}}</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Tyre:</h1>
+	<h1>{{'title' | translate}}</h1>
 	<p>https://github.com/benIT/angular.git</p>
 	<br/>
 
 	<ul>
-		<li><a ui-sref="home" href="">Acceuil</a></li>
-		<li><a ui-sref="tyres" href="">List pneu</a></li>
+		<li><a ui-sref="home" href="">{{'accueil' | translate:'{test: "blbllblb"}'}}</a></li>
+		<li><a ui-sref="tyres" href="">{{'list' | translate}}</a></li>
 	</ul>
 
 	<div ui-view="tyres"/>
@@ -21,6 +21,10 @@
 	<script type="text/javascript" src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
 	<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-translate/dist/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+		
 
 		<!--<<script type="text/javascript" src="js/modis.js"></script>
 		<script type="text/javascript" src="js/resource.js"></script>

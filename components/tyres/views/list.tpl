@@ -1,7 +1,7 @@
 <input class="filter" ng-model="search" type="text" placeholder="Recherche"/><br/><br/>
 <label  class="filter">Ref : </label>
 <input ng-model="searchReference" type="text" placeholder="Filtre type"/>
-<label>Type : </label>
+<label>{{'type' | translate}}</label>
 <input ng-model="searchType" type="text" placeholder="Filtre type"/>
 <label>H : </label>
 <input ng-model="searchHeight" type="text" placeholder="Filtre Height"/>
@@ -34,3 +34,9 @@
 		<a action="remove" ui-sref="tyres.subview({action:'delete',key:ref})">-</a>
 	</tyre>
 </list>
+
+
+<select ng-model="lang" ng-change="changeLang()">
+	<option value="en">EN</option>
+	<option value="fr">FR</option>
+</select>
