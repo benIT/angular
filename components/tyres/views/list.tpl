@@ -22,7 +22,7 @@
 	<option value="pattern.thickness">Thickness</option>
 </select>-->
 <list>
-	<tyre ng-repeat="(key, tyre) in tyres | tyreFilter : search | tyreFilterPart:{reference:searchReference, vehiculeType:searchType, pattern:{width:searchWidth, height:searchHeight, thickness:searchThickness}}"> <!--" | orderBy : selectedOrder">-->
+	<tyre ng-repeat="(ref, tyre) in tyres | tyreFilter : search | tyreFilterPart:{reference:searchReference, vehiculeType:searchType, pattern:{width:searchWidth, height:searchHeight, thickness:searchThickness}}"> <!--" | orderBy : selectedOrder">-->
 		<reference>{{tyre.reference}}</reference>
 		<vehiculeType>{{tyre.vehiculeType}}</vehiculeType>
 		<pattern>
@@ -30,7 +30,7 @@
 			<width>{{tyre.pattern.width}}</width>
 			<thickness>{{tyre.pattern.thickness}}</thickness>
 		</pattern>
-		<a action="edit" ui-sref="tyres.subview({action:'edit',key:tyre.reference})">e</a>
-		<a action="remove" ui-sref="tyres.subview({action:'delete',key:tyre.reference})">-</a>
+		<a action="edit" ui-sref="tyres.subview({action:'edit',key:ref})">e</a>
+		<a action="remove" ui-sref="tyres.subview({action:'delete',key:ref})">-</a>
 	</tyre>
 </list>

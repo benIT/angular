@@ -28,12 +28,10 @@ pattern > * {
 
 a{
 	cursor: pointer;
-	width: 20px;
+	min-width: 20px;
 	display: inline-block;
-	color: white;
 	border-radius: 10px;
 	text-align: center;
-	float: right;
 	margin-right: 5px;
 	text-decoration: none;
 }
