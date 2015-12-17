@@ -1,6 +1,15 @@
 'use strict';
 
-tyres.controller('ListTyresController', ['$translate', '$translatePartialLoader', '$scope', '$state', 'TyresService', function ($translate,$translatePartialLoader, $scope, $state, TyresService) {
+tyres.controller('ListTyresController', ['$translate', 
+										 '$translatePartialLoader', 
+										 '$scope', 
+										 '$state', 
+										 'TyresService', 
+										 function ($translate,
+										 	       $translatePartialLoader, 
+										 	       $scope, 
+										 	       $state, 
+										 	       TyresService) {
 	$scope.tyre = {pattern:{}};
 	$scope.readable = false;
 	$scope.displayForm = false;
@@ -45,8 +54,6 @@ tyres.controller('ManageTyresController', ['$scope',
 										   							 $stateParams,
 										   							 $state, 
 										   							 TyresService) {
-	// controller inheritance
-	//$controller("ListTyresController", {$scope : $scope});
 
 	if($stateParams['action'] == "delete"){
 		delete $scope.tyres[$stateParams['key']];
