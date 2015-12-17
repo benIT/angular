@@ -1,41 +1,31 @@
 [
-    
-    	{
-    	   "reference":"Hiver", 
-    	   "vehiculeType":"C1", 
-    	   "pattern":{ 
-        	   "height":"145", 
-        	   "thickness":"14", 
-        	   "width":"12"
-    	   }
-    	},
-        {
-           "reference":"Hiver Alpin", 
-           "vehiculeType":"308 SW", 
-           "pattern":{ 
-               "height":"195", 
-               "thickness":"95", 
-               "width":"17"
-           }
-        },
-    	{
-    	   "reference":"Ete", 
-    	   "vehiculeType":"BMW", 
-    	   "pattern":{ 
-        	   "height":"195", 
-        	   "thickness":"65", 
-        	   "width":"15"
-    	   }
-    	},
-    	{
-    	   "reference":"Toute saison", 
-    	   "vehiculeType":"Opel", 
-    	   "pattern":{ 
-        	   "height":"165", 
-        	   "thickness":"95", 
-        	   "width":"15"
-    	   }
-    	}    
+    {
+      "r1":{
+         "reference":"r1", 
+         "vehiculeType":"v1", 
+         "pattern":{ 
+             "height":"h1", 
+             "thickness":"t1", 
+             "width":"w1"
+         }
+      },
+      "r85":{
+         "reference":"r4", 
+         "vehiculeType":"v4", 
+         "pattern":{ 
+             "height":"h9", 
+             "thickness":"t12", 
+             "width":"w20"
+         }
+      },
+      "r3":{
+         "reference":"r3", 
+         "vehiculeType":"v3", 
+         "pattern":{ 
+             "height":"h3", 
+             "thickness":"t3", 
+             "width":"w3"
+         }
+      }
+    }
 ]
-
-

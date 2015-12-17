@@ -1,30 +1,51 @@
 // Imports modules dependencies
-var imports = ['ngRoute', 'ngResource'];
+var imports = ['ngRoute', 'ngResource', 'filters', 'ui.router'];
 var modis = angular.module('modis', imports);
 
 // app configuration
-modis.config(['$routeProvider', function ($routeProvider) {
+modis.config(function ($stateProvider, $urlRouterProvider) {
 
-	$routeProvider.when('/', {
-        templateUrl: 'partials/tyres.tpl',
-        controller: 'ListTyresController'
-  	});
+	$stateProvider.state('home',{
+		url:'/',
+        views : {
+        	'tyres' : {
+        		templateUrl: 'partials/list.tpl',
+        		controller: 'ListTyresController' 
+        	}
+        },             
+  	})
 
-  	$routeProvider.when('/:action/:key', {
-        templateUrl: 'partials/tyres.tpl',
-        controller: 'ManageTyresController'
-  	});
+  	$stateProvider.state('tyres',{
+  		url: '/:action',
+        views : {        	
+        	'tyres': {
+        		templateUrl: 'partials/tyres.tpl',        		
+        		controller: 'ListTyresController'
+        	},
+	    	'list@tyres': {
+	    		templateUrl: 'partials/list.tpl',
+	    		controller: 'ListTyresController' 
+	    	 },
+        },         
+  	})
+  	.state('tyres.subview', {
+  		url:'/:key',
+	    views: {
+	    	'form': {
+	    		templateUrl: 'partials/addTyre.tpl',
+	    		controller: 'ManageTyresController'  
+	    	}
+	    },	      
+	})
+  	.state('tyres.subviewadd', {
+	    views: {
+	    	'form': {
+	    		templateUrl: 'partials/addTyre.tpl',
+	    		controller: 'ManageTyresController'  
+	    	}
+	    },	      
+	})
 
-  	// Dispatcher (need to be test)
-	/*$routeProvider.when('/dispatch/:action', {
-        templateUrl: function($routeParams) {
-        	return 'partials/'+$routeParams['action']+'.tpl',
-        },
-        controllerProvider: function($routeParams) {
-        	return $routeParams['action']+"Controller",
-        },
-  	});*/
-
-  	$routeProvider.otherwise('/');
-}]);
+  	$urlRouterProvider.otherwise('/');
+});
 
