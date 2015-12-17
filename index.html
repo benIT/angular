@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 
 <html ng-app="modis">
-	<head>
-		<title>Ma base de pneus</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<h1>Tyre:</h1>
-		<p>https://github.com/benIT/angular.git</p>
-		<br/>
-		
-		<div ui-view="tyres"/>
+<head>
+	<title>Ma base de pneus</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Tyre:</h1>
+	<p>https://github.com/benIT/angular.git</p>
+	<br/>
 
-		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-		<script type="text/javascript" src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
-		<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
-		<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
-		
+	<ul>
+		<li><a ui-sref="home" href="">Acceuil</a></li>
+		<li><a ui-sref="tyres" href="">List pneu</a></li>
+	</ul>
+
+	<div ui-view="tyres"/>
+
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+
 		<!--<<script type="text/javascript" src="js/modis.js"></script>
 		<script type="text/javascript" src="js/resource.js"></script>
 		<script type="text/javascript" src="js/view.js"></script>
 		<script type="text/javascript" src="js/pojo.js"></script>-->
+		<script type="text/javascript" src="components/tyres/js/state.js"></script>
 		<script type="text/javascript" src="js/lib.js"></script>
-
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/service.js"></script>
 		<script type="text/javascript" src="js/controller.js"></script>
-		<script type="text/javascript" src="js/filter.js"></script>
+		<script type="text/javascript" src="components/tyres/js/controller.js"></script>
+		<script type="text/javascript" src="components/tyres/js/filter.js"></script>
 	</body>
-</html>
+	</html>
